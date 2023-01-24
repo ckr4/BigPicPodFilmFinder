@@ -1,4 +1,0 @@
-path: data.rds
-type: default
-filenames:
-  data.rds: data.rds
