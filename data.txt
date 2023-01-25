@@ -1,0 +1,6 @@
+- path: ep-name-dict
+  name: ep-name-dict
+  type: table
+  description: ep_name_dict
+  rows: 129
+  cols: 2
