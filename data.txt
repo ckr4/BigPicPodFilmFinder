@@ -4,3 +4,9 @@
   description: ep_name_dict
   rows: 129
   cols: 2
+- path: ep-movie-dict
+  name: ep-movie-dict
+  type: table
+  description: ep_movie_dict
+  rows: 31536
+  cols: 2
