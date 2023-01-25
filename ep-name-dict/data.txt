@@ -6,8 +6,8 @@ description: ep_name_dict
 rows: 129
 cols: 2
 columns:
-  Episode: character
-  EpName: character
+  episode: character
+  name: character
 filenames:
   data.csv: data.csv
   data.rds: data.rds
