@@ -16,3 +16,9 @@
   description: ep_title_dict
   rows: 129
   cols: 2
+- path: ep-link-dict
+  name: ep-link-dict
+  type: table
+  description: ep_link_dict
+  rows: 129
+  cols: 2
