@@ -10,3 +10,9 @@
   description: ep_movie_dict
   rows: 31536
   cols: 2
+- path: ep-title-dict
+  name: ep-title-dict
+  type: table
+  description: ep_title_dict
+  rows: 129
+  cols: 2
