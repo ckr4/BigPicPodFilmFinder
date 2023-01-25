@@ -1,0 +1,13 @@
+path:
+- data.csv
+- data.rds
+type: table
+description: ep_title_dict
+rows: 129
+cols: 2
+columns:
+  SearchText: character
+  Matches: character
+filenames:
+  data.csv: data.csv
+  data.rds: data.rds
