@@ -8,7 +8,7 @@
   name: ep-movie-dict
   type: table
   description: ep_movie_dict
-  rows: 31536
+  rows: 32068
   cols: 2
 - path: ep-title-dict
   name: ep-title-dict
