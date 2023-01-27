@@ -2,7 +2,7 @@
   name: ep-name-dict
   type: table
   description: ep_name_dict
-  rows: 129
+  rows: 229
   cols: 2
 - path: ep-movie-dict
   name: ep-movie-dict
