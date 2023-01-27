@@ -3,7 +3,7 @@ path:
 - data.rds
 type: table
 description: ep_movie_dict
-rows: 32068
+rows: 71376
 cols: 2
 columns:
   Movie: character
