@@ -3,7 +3,7 @@ path:
 - data.rds
 type: table
 description: ep_name_dict
-rows: 229
+rows: 542
 cols: 2
 columns:
   episode: character
