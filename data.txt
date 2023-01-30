@@ -14,7 +14,7 @@
   name: ep-title-dict
   type: table
   description: ep_title_dict
-  rows: 15618
+  rows: 7239103
   cols: 2
 - path: ep-link-dict
   name: ep-link-dict
