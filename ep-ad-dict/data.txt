@@ -3,7 +3,7 @@ path:
 - data.rds
 type: table
 description: ep_ad_dict
-rows: 10738
+rows: 10733
 cols: 2
 columns:
   Name: character
