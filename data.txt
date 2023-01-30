@@ -32,5 +32,5 @@
   name: ep-ad-dict
   type: table
   description: ep_ad_dict
-  rows: 10221
+  rows: 9772
   cols: 2
