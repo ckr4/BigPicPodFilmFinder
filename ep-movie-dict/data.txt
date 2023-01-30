@@ -1,5 +1,5 @@
 path:
-- https://api.github.com/repos/ckr4/BigPicPodFilmFinder/releases/assets/93533218
+- https://api.github.com/repos/ckr4/BigPicPodFilmFinder/releases/assets/93549585
 - data.rds
 type: table
 description: ep_movie_dict
@@ -9,5 +9,5 @@ columns:
   Movie: character
   Episode: character
 filenames:
-  https://api.github.com/repos/ckr4/BigPicPodFilmFinder/releases/assets/93533218: data.csv
+  https://api.github.com/repos/ckr4/BigPicPodFilmFinder/releases/assets/93549585: data.csv
   data.rds: data.rds
