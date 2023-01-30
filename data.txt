@@ -28,3 +28,9 @@
   description: ad_list
   rows: 1220
   cols: 1
+- path: ep-ad-dict
+  name: ep-ad-dict
+  type: table
+  description: ep_ad_dict
+  rows: 10738
+  cols: 2
