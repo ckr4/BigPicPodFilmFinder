@@ -1,13 +1,13 @@
 path:
-- data.csv
+- https://api.github.com/repos/ckr4/BigPicPodFilmFinder/releases/assets/93533218
 - data.rds
 type: table
 description: ep_movie_dict
-rows: 222005
+rows: 7172905
 cols: 2
 columns:
   Movie: character
   Episode: character
 filenames:
-  data.csv: data.csv
+  https://api.github.com/repos/ckr4/BigPicPodFilmFinder/releases/assets/93533218: data.csv
   data.rds: data.rds
