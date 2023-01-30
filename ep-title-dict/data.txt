@@ -3,7 +3,7 @@ path:
 - data.rds
 type: table
 description: ep_title_dict
-rows: 712790
+rows: 16023
 cols: 2
 columns:
   SearchText: character
