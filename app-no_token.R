@@ -1,26 +1,32 @@
 library(shiny)
-library(shinythemes)
 library(pins)
-library(rjson)
-library(plyr)
 library(stringr)
 
-board_register_github(repo="ckr4/BigPicPodFilmFinder", token="!!!token goes here!!!")
+# register github board to retreive pinned data
+board_register_github(repo="ckr4/BigPicPodFilmFinder", token="")
 
+# retrieve dictionaries from github pin
 ep_name_dict <- pin_get("ep-name-dict", board="github")
 ep_movie_dict <- pin_get('ep-movie-dict', board='github')
 ep_title_dict <- pin_get('ep-title-dict', board='github')
 ep_link_dict <- pin_get('ep-link-dict', board='github')
 ep_ad_dict <- pin_get('ep-ad-dict', board='github')
 
-m_choices <- data.frame(label=c("", unique(ep_title_dict$SearchText)), 
-                      value=c("", unique(ep_title_dict$SearchText)))
-ad_choices <- data.frame(label=c("", ep_ad_dict$Name),
-                         value=c("", ep_ad_dict$Name))
+# create sorted lists for drop down selections
+ep_title_list <- sort(names(ep_title_dict))
+ep_ad_list <- sort(names(ep_ad_dict))
+
+# create label/value pairs for drop down selections
+# ---> needed to set in server instead of UI 
+# ---> setting in server due to size of m and ad lists
+m_choices <- data.frame(label=c("", ep_title_list), 
+                      value=c("", ep_title_list))
+ad_choices <- data.frame(label=c("", ep_ad_list),
+                         value=c("", ep_ad_list))
 ep_choices <- data.frame(label=c('Movie Draft', 'Movie Auction', 'Hall of Fame'),
                          value=c('Movie Draft', 'Movie Auction', 'Hall of Fame'))
 
-matches <- c()
+matches = c()
 
 ui <- fluidPage(
           
@@ -290,6 +296,10 @@ server <- function(input, output, session) {
                                   Wikipedia's lists of actors and directors who have been nominated
                                   for an Academy Award, and is thus limited to a small subset of all
                                   actors. </p>"),
+                        HTML("<p>Note: Movie titles that consist of common words are likely to give 
+                                  inaccurate results (e.g. 'The One'), as will titles that are 
+                                  contained in other movie titles (e.g. 'Twelve', which will produce 
+                                  results for 'Twelve Months', 'Twelve Monkeys' and 'Ocean's Twelve')."),
                         HTML("<p>Any other issues that arise are almost certainly my fault, and well, 
                                   sorry I guess?</p>"),
                         hr(),
@@ -345,7 +355,7 @@ server <- function(input, output, session) {
           
   observeEvent(input$search_sel, {
     if (input$cat_sel == 'Movie') {
-      matches <- unique(ep_title_dict[which(ep_title_dict$SearchText==input$search_sel),2])
+      matches <- unlist(ep_title_dict[which(names(ep_title_dict)==input$search_sel)])
       output$mats <- renderUI({
         mats = ""
         if (length(matches) > 0) {
@@ -359,7 +369,8 @@ server <- function(input, output, session) {
         HTML(mats)
       })
       output$res <- renderText({
-        results <- ep_movie_dict[which(ep_movie_dict$Movie==input$search_sel),2]
+        raw_results <- unlist(ep_movie_dict[which(names(ep_movie_dict)==input$search_sel)])
+        results <- sort(as.numeric(raw_results))
         linked_res = ""
         if (length(results) > 0) {
           linked_res = "<div><table><tr><td>Ep.</td><td>Title</td></tr>"
@@ -405,7 +416,8 @@ server <- function(input, output, session) {
         output$res <- renderText({
           linked_res = ""
           if (input$search_sel != ""){
-            results <- ep_ad_dict[which(ep_ad_dict$Name==input$search_sel), 2]
+            raw_results <- unlist(ep_ad_dict[which(names(ep_ad_dict)==input$search_sel)])
+            results <- sort(as.numeric(raw_results))
             if (length(results) > 0) {
               linked_res = "<div><table><tr><td>Ep.</td><td>Title</td></tr>"
               for (i in 1:length(results)) {
@@ -422,10 +434,7 @@ server <- function(input, output, session) {
         })
       }
     })
-    
-    
             
 }
 
 shinyApp(ui = ui, server = server)
-
