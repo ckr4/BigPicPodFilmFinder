@@ -6,10 +6,8 @@
   cols: 2
 - path: ep-movie-dict
   name: ep-movie-dict
-  type: table
+  type: default
   description: ep_movie_dict
-  rows: 309294
-  cols: 2
 - path: ep-title-dict
   name: ep-title-dict
   type: table

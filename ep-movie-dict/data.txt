@@ -1,13 +1,5 @@
-path:
-- data.csv
-- data.rds
-type: table
+path: data.rds
+type: default
 description: ep_movie_dict
-rows: 309294
-cols: 2
-columns:
-  Movie: character
-  Episode: character
 filenames:
-  data.csv: data.csv
   data.rds: data.rds
