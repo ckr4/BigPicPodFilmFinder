@@ -6,6 +6,6 @@ This tool uses simple text matching to find the titles of movies or names of act
 Spotify. Movie titles are taken from Wikipedia's list of films. The list of actors and directors is taken from Wikipedia's lists of actors and directors who have been 
 nominated for an Academy Award.
 
-Note: Movie titles that consist of common words are likely to give inaccurate results. 
+Note: Movie titles that consist of common words are likely to give inaccurate results (e.g. 'The One'), as will titles that are contained in other movie titles (e.g. 'Twelve', which will produce results for 'Twelve Months', 'Twelve Monkeys' and 'Ocean's Twelve').
 
 The tool can also filter podcast episodes by type: Movie Draft, Movie Auction, or Hall of Fame.
