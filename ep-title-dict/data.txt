@@ -1,13 +1,5 @@
-path:
-- data.csv
-- data.rds
-type: table
+path: data.rds
+type: default
 description: ep_title_dict
-rows: 16024
-cols: 2
-columns:
-  SearchText: character
-  Matches: character
 filenames:
-  data.csv: data.csv
   data.rds: data.rds
