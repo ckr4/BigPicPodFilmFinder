@@ -1,13 +1,5 @@
-path:
-- data.csv
-- data.rds
-type: table
+path: data.rds
+type: default
 description: ep_ad_dict
-rows: 9772
-cols: 2
-columns:
-  Name: character
-  Episode: character
 filenames:
-  data.csv: data.csv
   data.rds: data.rds

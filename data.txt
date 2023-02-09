@@ -26,7 +26,5 @@
   cols: 1
 - path: ep-ad-dict
   name: ep-ad-dict
-  type: table
+  type: default
   description: ep_ad_dict
-  rows: 9772
-  cols: 2
