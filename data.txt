@@ -11,7 +11,7 @@
 - path: ep-title-dict
   name: ep-title-dict
   type: default
-  description: ep_title_dict
+  description: Dictionary of Titles
 - path: ep-link-dict
   name: ep-link-dict
   type: table
