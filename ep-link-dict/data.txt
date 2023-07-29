@@ -2,8 +2,8 @@ path:
 - data.csv
 - data.rds
 type: table
-description: ep_link_dict
-rows: 551
+description: Dictionary of Links
+rows: 587
 cols: 2
 columns:
   episode: character

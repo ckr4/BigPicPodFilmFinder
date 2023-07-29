@@ -15,8 +15,8 @@
 - path: ep-link-dict
   name: ep-link-dict
   type: table
-  description: ep_link_dict
-  rows: 551
+  description: Dictionary of Links
+  rows: 587
   cols: 2
 - path: ad-list
   name: ad-list
