@@ -27,4 +27,4 @@
 - path: ep-ad-dict
   name: ep-ad-dict
   type: default
-  description: ep_ad_dict
+  description: Dictionary of Actors and Directors
