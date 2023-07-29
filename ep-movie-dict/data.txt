@@ -1,5 +1,5 @@
 path: data.rds
 type: default
-description: ep_movie_dict
+description: Dictionary of Movies
 filenames:
   data.rds: data.rds

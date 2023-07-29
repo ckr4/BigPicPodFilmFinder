@@ -7,7 +7,7 @@
 - path: ep-movie-dict
   name: ep-movie-dict
   type: default
-  description: ep_movie_dict
+  description: Dictionary of Movies
 - path: ep-title-dict
   name: ep-title-dict
   type: default
