@@ -1,7 +1,7 @@
 - path: ep-name-dict
   name: ep-name-dict
   type: table
-  description: ep_name_dict
+  description: Dictionary of Episode Names
   rows: 587
   cols: 2
 - path: ep-movie-dict
