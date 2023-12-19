@@ -3,7 +3,7 @@ path:
 - data.rds
 type: table
 description: Dictionary of Episode Names
-rows: 595
+rows: 640
 cols: 2
 columns:
   episode: character
